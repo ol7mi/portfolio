@@ -1,0 +1,1608 @@
+@import url(reset.css);
+@import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
+@font-face {
+    font-family: 'Oswald';
+    src: url(..//font/Oswald/static/Oswald-Bold.ttf);
+}
+@font-face {
+    font-family: 'Noto';
+    src: url(..//font/Noto_Sans_KR/NotoSansKR-Medium.otf);
+}
+body {font-family: 'Oswald' , 'Noto' , sans-serif; font-size: 20px; color: #333;}
+a {color: #333; text-decoration: none;}
+
+
+#container > div {width: 100%; /*height: 100vh;*/}
+#container > .content1 {position: relative;overflow: hidden; background-color: #F4F2F2;}
+#container > .content2 {position: relative;overflow: hidden; background-image: linear-gradient(to bottom, #98d4f3, #83c6e7)}
+#container > .content3 {position: relative;overflow: hidden; background-image: linear-gradient(to bottom, #83c6e7, #69b2d6)}
+#container > .content4 {position: relative;overflow: hidden; background-image: linear-gradient(to bottom, #69b2d6, #4f9bc2)}
+#container > .content5 {position: relative;overflow: hidden; background-image: linear-gradient(to bottom, #4f9bc2, rgb(57, 98, 164))}
+
+
+/* 고양이 마우스 */
+html {cursor: url(../images/cat.png), auto}
+
+/* 햄버거 버튼 */
+.btnMenu {
+    z-index: 50; 
+    position: fixed; 
+    left: 50px; 
+    top: 50px;
+    font-size: 40px; 
+    color: #fff;
+    animation: btnMenu 0.5s linear 0s infinite alternate;
+}
+@keyframes btnMenu {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+        color: #fff;
+    }
+    100% {
+        transform: scale(1.5); 
+        opacity: 0.8; 
+        color: #888;
+    }
+}  
+
+/* 햄버거 버튼 닫기 */
+.subbtn {
+    z-index: 50; 
+    position: fixed; 
+    left: 50px; 
+    top: 50px;
+    font-size: 40px; 
+    color: #fff;
+    animation: btnMenu 0.5s linear 0s infinite alternate;
+}
+@keyframes btnMenu {
+    0% {transform: scale(1);opacity: 1;color: #fff;}
+    100% {transform: scale(1.5); opacity: 0.8; color: #888;}
+}  
+
+/* Animation 물고기 */
+/* Animation webkit */
+@-webkit-keyframes myfirst {
+    0% {margin-left: -235px}
+    90% {margin-left: 100%;}
+    100% {margin-left: 100%;}
+}
+/* Animation */
+@keyframes myfirst {
+    0% {margin-left: -235px}
+    70% {margin-left: 100%;}
+    100% {margin-left: 100%;}
+}
+.fish{
+    background: url(../images/fish.png) no-repeat 0 0; 
+    opacity: 0.3;
+    background-size: 208px; 
+    width: 208px; height: 126px;
+    margin-left: -235px;
+    position: absolute;	
+    animation: myfirst 24s;
+    -webkit-animation: myfirst 24s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+}
+.content2 > .fish{
+    background: url(../images/fish2.png) no-repeat 0 0;
+}
+#fish {top: 120px;}
+#fish2 {top: 260px;animation-delay: 12s;-webkit-animation-delay: 12s;}
+
+
+
+
+
+
+
+
+/* container */
+/* content1 */
+.content1 section img {opacity: 0.3; position: absolute;}
+/* head */
+.content1 section .main > ul {
+    position: absolute;
+    top: 5%;left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 25px;
+}
+.content1 section .main > ul > li:nth-child(2) {
+    color: #F90; text-shadow: 10px 10px 10px #eee;
+    font-size: 50px;
+}
+.content1 section .main > ul > li:nth-child(2) {animation: li 1s ease 0s alternate infinite;}
+@keyframes li {
+    0% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
+/* foot */
+.content1 section .main { 
+    display: flex;
+    background: #fff;
+    justify-content: flex-end;
+    align-items: flex-end;
+    min-height: 100vh;}
+.content1 section .main .waves_wrap {
+    position: relative;
+    width: 100%;
+    background: #98d4f3;
+    min-height: 100px;
+    padding: 80px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content1 section .main .waves_wrap .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100vw;
+    height: 200px;
+    background: url(../images/waves.png) repeat-x ;
+    background-size: 1700px 110px;
+}
+.content1 section .main .waves_wrap .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWaves 100s linear infinite;
+}
+.content1 section .main .waves_wrap .wave#wave2 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 10px;
+    animation: animate 100s linear infinite !important;
+}
+.content1 section .main .waves_wrap .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWaves 100s linear infinite;
+}
+.content1 section .main .waves_wrap .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animate 100s linear infinite;
+}
+@keyframes animateWaves {
+    0% {
+        background-position-x: 1500px;
+    }
+    100% {
+        background-positon-x: 0px;
+    }
+}
+
+@keyframes animate {
+    0% {
+        background-position-x: -1500;
+    }
+    100% {
+        background-positon-x: 0px;
+    }
+}
+
+/* SVG 나와 고양이 */
+svg {
+    width: 20%; position:absolute; top: -345px;left: 40%;
+    animation:  svg ease-in-out 1.6s infinite alternate;transform-origin: center;
+}
+#header {animation:  head ease-in-out 1.6s infinite alternate;transform-origin: bottom;}
+#cet {animation:  head ease-in-out 1.6s infinite alternate;transform-origin: bottom;}
+#fot {animation:  fot ease-in-out 1.6s infinite alternate;transform-origin: top;}
+#eyes {animation:  eyes 7s step-end infinite both; transform-origin: center;}
+@keyframes svg {
+    0% {transform:translateY(5px)}
+    100% {transform:translateY(-5px)}
+}
+@keyframes fot {
+    0% {transform:rotate(1deg)}
+    100% {transform:rotate(-1deg)}
+}
+@keyframes head {
+    0% {transform:rotate(0.5deg)}
+    100% {transform:rotate(-0.5deg)}
+}
+@keyframes eyes {
+    from, to, 10%, 25%, 80% {
+        transform: scaleY(1);
+    }
+    8%, 23%, 100% {
+        transform: scaleY(0.01);
+    }
+}
+
+
+
+
+
+/* content2 */
+.content2 section {
+    display: flex;
+    flex-direction: row; 
+    width: 100%;
+    height: 100%; 
+    padding: 100px 150px;
+    box-sizing: border-box;
+}
+.content2 section div:nth-child(1) {
+    flex: 1;
+}
+/* 프로필 */
+#container > .content2 > section > div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-right: 50px; 
+    box-sizing: border-box;
+}
+#container > .content2 > section > div:nth-child(1) h1 {
+    font-size: 60px; 
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+}
+.content2 > section > div:nth-child(1) > span {
+    background-color: #fff; 
+    border-radius: 50%; 
+    width: 25%; height: 25%;
+    display: inline-block;
+    overflow: hidden; 
+    margin-left: 20%;
+    opacity: 0;
+    transform: scale(4);
+    transition: all 0.8s ease-in-out 0s;
+}
+.content2 > section > div:nth-child(1) > span :hover {transform: rotate(9deg);}
+.content2 > section > div:nth-child(1) > div > ul {
+    width: 60%;
+    text-align: center; 
+    margin-left: 20px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.content2 > section > div:nth-child(1) > div > ul > li {
+    margin-bottom: 20px; 
+    color: #fff;
+    text-shadow: 2px 2px 2px #999;
+}
+.content2 > section > div:nth-child(1) > div > ul > li:hover {color: #F90;}
+.content2 > section > div:nth-child(1) > div > ul > li:nth-child(1) {opacity: 0;transform: translateY(-300px);transition: all 2s ease-in-out 0s;}
+.content2 > section > div:nth-child(1) > div > ul > li:nth-child(2) {opacity: 0;transform: translateY(-300px);transition: all 1.5s ease-in-out 0s;}
+.content2 > section > div:nth-child(1) > div > ul > li:nth-child(3) {opacity: 0;transform: translateY(-300px);transition: all 1s ease-in-out 0s;}
+.content2 > section > div:nth-child(1) > div > ul > li > ul {
+    font-size: 15px;
+    line-height: 1.6; 
+    color:#333;
+    text-shadow : none
+}
+/* on 효과 */
+#container > .content2 > section.on > div:nth-child(1) h1 {opacity: 1;}
+.content2 > section.on > div:nth-child(1) > span{transform: scale(1);opacity: 1;}
+.content2 > section.on > div:nth-child(1) > div > ul > li {transform: translateY(0); opacity: 1;}
+
+/* 스킬 */
+.content2 section div:nth-child(2) {flex: 1;}
+.content2 section div:nth-child(2) > ul {height: 100%;display: flex;flex-direction: column;justify-content: center;}
+.content2 section div:nth-child(2) > ul > li {display: flex;flex-direction: column;margin-bottom: 30px;}
+.content2 section div:nth-child(2) > ul > li > a {letter-spacing: 2px;padding-bottom: 5px;box-sizing: border-box;}
+/* 스킬 그래프 */
+.content2 section div:nth-child(2) > ul > li > span {position: relative; text-indent: -9999px;overflow: hidden; background: #fff;border-radius: 30px;}
+.content2 section.on div:nth-child(2) > ul > li:first-child > span::before {position: absolute; content: '';display: block;width: 80%;height: 100%;background-color: #f90;animation:skill 3s linear 0s;border-radius: 30px;}
+.content2 section.on div:nth-child(2) > ul > li:nth-child(2) > span::before {position: absolute; content: '';display: block;width: 80%;height: 100%;background: #f90 ;animation:skill2 3s linear 0s;border-radius: 30px;}
+.content2 section.on div:nth-child(2) > ul > li:nth-child(3) > span::before {position: absolute; content: '';display: block;width: 70%;height: 100%;background: #f90 ;animation:skill3 3s linear 0s;border-radius: 30px;}
+.content2 section.on div:nth-child(2) > ul > li:nth-child(4) > span::before {position: absolute; content: '';display: block;width: 60%;height: 100%;background: #f90 ;animation:skill4 3s linear 0s;border-radius: 30px;}
+.content2 section.on div:nth-child(2) > ul > li:nth-child(5) > span::before {position: absolute; content: '';display: block;width: 50%;height: 100%;background: #f90 ;animation:skill5 3s linear 0s;border-radius: 30px;}
+.content2 section.on div:nth-child(2) > ul > li:nth-child(6) > span::before {position: absolute; content: '';display: block;width: 70%;height: 100%;background: #f90 ;animation:skill6 3s linear 0s;border-radius: 30px;}
+.content2 section.on div:nth-child(2) > ul > li:nth-child(7) > span::before {position: absolute; content: '';display: block;width: 70%;height: 100%;background: #f90 ;animation:skill7 3s linear 0s;border-radius: 30px;}
+.content2 section.on div:nth-child(2) > ul > li:nth-child(8) > span::before {position: absolute; content: '';display: block;width: 100%;height: 100%;background: #f90 ;animation:skill8 3s linear 0s;border-radius: 30px;}
+@keyframes skill {
+    0%{transform-origin: left; background:#f90;width: 0;}
+    100%{transform-origin: left; background:#f90; width: 80%;}
+}
+@keyframes skill2 {
+    0%{transform-origin: left; background:#f90;width: 0;}
+    100%{transform-origin: left; background:#f90; width: 80%;}
+}
+@keyframes skill3 {
+    0%{transform-origin: left; background:#f90;width: 0;}
+    100%{transform-origin: left; background:#f90; width: 70%;}
+}
+@keyframes skill4 {
+    0%{transform-origin: left; background:#f90;width: 0;}
+    100%{transform-origin: left; background:#f90; width: 60%;}
+}
+@keyframes skill5 {
+    0%{transform-origin: left; background:#f90;width: 0;}
+    100%{transform-origin: left; background:#f90; width: 50%;}
+}
+@keyframes skill6 {
+    0%{transform-origin: left; background:#f90;width: 0;}
+    100%{transform-origin: left; background:#f90; width: 70%;}
+}
+@keyframes skill7 {
+    0%{transform-origin: left; background:#f90;width: 0;}
+    100%{transform-origin: left; background:#f90; width: 70%;}
+}
+@keyframes skill8 {
+    0%{transform-origin: left; background:#f90;width: 0;}
+    100%{transform-origin: left; background:#f90; width: 100%;}
+}
+
+
+
+
+
+/* content3 */
+/* on 효과 */
+.content3 > section #popups li:nth-child(1) span:nth-child(1),
+.content3 > section #popups li:nth-child(1) span:nth-child(2)  {opacity: 0;transition: all 0.8s linear 0.8s;}
+.content3 > section #popups li:nth-child(2) span:nth-child(1) {opacity: 0;transition: all 0.8s linear 0.8s;}
+.content3 > section #popups li:nth-child(3) span:nth-child(1) {opacity: 0;transition: all 0.8s linear 0.8s;}
+.content3 > section #popups li:nth-child(4) span:nth-child(1) {opacity: 0;transition: all 0.8s linear 0.8s;}
+.content3 > section #popups li:nth-child(5) span:nth-child(1) {opacity: 0;transition: all 0.8s linear 0.8s;}
+.content3 > section #popups li:nth-child(6) span:nth-child(1) {opacity: 0;transition: all 0.8s linear 0.8s;}
+
+.content3 > section.on #popups li span:nth-child(1),
+.content3 > section.on #popups li:nth-child(1) span:nth-child(2)  {opacity: 1;}
+.content3 > section.on #popups li:nth-child(2) span:nth-child(1) {opacity: 1;}
+.content3 > section.on #popups li:nth-child(3) span:nth-child(1) {opacity: 1;}
+.content3 > section.on #popups li:nth-child(4) span:nth-child(1) {opacity: 1;}
+.content3 > section.on #popups li:nth-child(5) span:nth-child(1) {opacity: 1;}
+.content3 > section.on #popups li:nth-child(6) span:nth-child(1) {opacity: 1;}
+
+.content3 section #popups li:nth-child(2) span:nth-child(2){
+    opacity: 0; 
+    transform: translateX(1500px);
+    transition: all 0.5s ease-in-out 0s;
+}
+.content3 section #popups li:nth-child(3) span:nth-child(2){
+    opacity: 0; 
+    transform: translateX(1500px);
+    transition: all 0.8s ease-in-out 0s;
+}
+.content3 section #popups li:nth-child(4) span:nth-child(2){
+    opacity: 0; 
+    transform: translateX(1500px);
+    transition: all 1.1s ease-in-out 0s;
+}
+.content3 section #popups li:nth-child(5) span:nth-child(2){
+    opacity: 0; 
+    transform: translateX(1500px);
+    transition: all 1.4s ease-in-out 0s;
+}
+.content3 section #popups li:nth-child(6) span:nth-child(2){
+    opacity: 0; 
+    transform: translateX(1500px);
+    transition: all 1.7s ease-in-out 0s;
+}
+.content3 section.on #popups li:nth-child(2) span:nth-child(2) {opacity: 1; transform: translateX(0);}
+.content3 section.on #popups li:nth-child(3) span:nth-child(2) {opacity: 1; transform: translateX(0);}
+.content3 section.on #popups li:nth-child(4) span:nth-child(2) {opacity: 1; transform: translateX(0);}
+.content3 section.on #popups li:nth-child(5) span:nth-child(2) {opacity: 1; transform: translateX(0);}
+.content3 section.on #popups li:nth-child(6) span:nth-child(2) {opacity: 1; transform: translateX(0);}
+/* 목록 */
+.content3 section {width: 100%;height: 100%; padding: 100px 150px;box-sizing: border-box;}
+.content3 section #popups {display: flex;flex-direction: column;justify-content: space-between;height: 100%;}
+.content3 section #popups li {display: flex;flex-direction: row;border-bottom: 5px solid rgba(255, 255, 255, 0.512);box-sizing: border-box;}
+.content3 section #popups li > span > a {font-size: 40px; display: inline-block; color: #000;}
+.content3 section #popups li > span {font-size: 25px;}
+.content3 section #popups li > span:nth-child(1) {flex: 1;line-height: 50px;color: #333;}
+.content3 section #popups li > span:nth-child(2) {flex: 30;line-height: 50px; text-align: center;padding-bottom: 10px; box-sizing: border-box;}
+.content3 section #popups li > span:nth-child(2) > a {transition: all 0.3s ease-in 0s;}
+.content3 section #popups li > span:nth-child(2) > a:hover {color: rgba(255, 255, 255, 0.518);}
+.content3 section #popups li > span:nth-child(2) > a:active {color: #fff; transform: scale(1.2);}
+/* hover 했을때 오른쪽에 아이콘 뜨게끔 */
+.content3 section #popups .hover{position: relative;}
+.content3 section #popups .hover2{position: relative;}
+.content3 section #popups .hover3{position: relative;}
+.content3 section #popups .hover4{position: relative;}
+.content3 section #popups .hover5{position: relative;}
+.content3 section #popups .hover::after {
+    position: absolute;
+    right: -150px;top: -30px;
+    content: ''; 
+    width: 360px;height: 160px; 
+    display: block;
+    background:url(../images/logo_hover4.png) no-repeat 0 0; 
+    background-size: 200px;
+    opacity: 0;
+    transition: all 0.5s ease 0s; transform: scale(0.5);
+}
+.content3 section #popups .hover2::after {
+    position: absolute;
+    right: -200px;top: 0;
+    content: ''; 
+    width: 360px;height: 160px;
+    display: block;
+    background:url(../images/logo_hover3.png) no-repeat 0 0; 
+    background-size: 100px;
+    opacity: 0;
+    transition: all 0.5s ease 0s;transform: scale(0.5);
+}
+.content3 section #popups .hover3::after {
+    position: absolute;
+    right: 60px;top: -20px;
+    content: ''; 
+    width: 60px;height: 98px; 
+    display: block;
+    background:url(../images/logo_hover2.png) no-repeat 0 0; 
+    background-size: 60px;
+    opacity: 0;
+    transition: all 0.5s ease 0s;transform: scale(0.5);
+}
+.content3 section #popups .hover4::after {
+    position: absolute;
+    right: -200px;top: -35px;
+    content: ''; 
+    width: 360px;height: 160px; 
+    display: block;
+    background:url(../images/logo_hover.png) no-repeat 0 0; 
+    background-size: 100px;
+    opacity: 0;
+    transition: all 0.5s ease 0s;transform: scale(0.5);
+}
+.content3 section #popups .hover5::after {
+    position: absolute;
+    right: -215px;top: -20px;
+    content: ''; 
+    width: 360px;height: 100px; 
+    display: block;
+    background:url(../images/logo_hover5.png) no-repeat 0 0; 
+    background-size: 80px;
+    opacity: 0;
+    transition: all 0.5s ease 0s;transform: scale(0.5);
+}
+.content3 section #popups li:hover::after {opacity: 1;transform: scale(1);}
+
+/* list 클릭시 뜨는 해당 팜업창 */
+.content3 section > .popup { 
+    z-index: 60; 
+    position: absolute;
+    left: 50%;top: 50%;
+    transform: translate(-50%, -50%); 
+    visibility: hidden; 
+    width: 95%;height: 95%;
+    background-color: #fff;
+    border-radius: 20px;
+    opacity: 0;
+    transition:all 0.3s linear 0s;
+    display: flex;flex-direction: row;
+}
+.content3 section > .popup:target {visibility: visible;opacity: 1;}
+.content3 section > .btnpop {display: block;}
+/* 닫기 */
+.content3 section > .popup > a {position: absolute;right: 0; color: #F90;padding: 20px;box-sizing: border-box;}
+.content3 section > .popup > a:hover > i {color: #000; transition: color .3s linear 0s;}
+/* 오른쪽 설명 */
+.content3 section #popup3 > .about > p {font-size: 60px;}
+.content3 section .popup > .about {width: 100%; color: #F90; padding: 120px 40px 120px 180px;text-align: left;flex: 1;}
+.content3 section .popup > .about > p:nth-child(2) {font-size: 60px; }
+.content3 section .popup > .about > ul {font-size: 15px; padding-top: 50px;box-sizing: border-box;height: 50%;line-height: 1;}
+.content3 section .popup > .about > ul li {border: none; color: #000;display: flex;flex-direction: column;justify-content: space-around; font-size: 20px; color: #f90}
+.content3 section .popup > .about > ul li ul {margin-bottom: 20px;margin-top: 10px;}
+.content3 section .popup > .about > ul li ul li {font-size: 15px; color: #000; line-height: 1.3;}
+/* 해당 페이지로 이동하는 버튼 */
+/* .content3 section .popup > .about > .the_btn {display: inline-block;padding: 10px;border-radius: 10px; background-color: #F90;margin-top: 50px;color: #fff;margin-right: 10px;} */
+.content3 section .popup > .about > .the_btn.bottom {
+    position: relative;bottom:5px;
+}
+.content3 section .popup > .about > .the_btn.top {
+    position: relative;bottom:-120px;
+}
+.content3 section .popup > .about > .the_btn { 
+    display: inline-block; 
+    margin-right: 20px;
+    position: relative;
+    bottom:-50px;
+    width: 150px;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    background-color: rgba(136, 136, 136, 0.209);
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(black, .2);
+    background: lighten(#f0f4c3, 10%);
+    transform: translate3d(0, 0, 0);
+}
+.content3 section .popup > .about > .the_btn::after{
+    content: '';
+    display: block;
+    opacity: .4;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    background: #0af;
+    width: 300px;height: 300px;
+    margin-left: -150px;
+    margin-bottom: -301px;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    transition-duration: 0.75s;
+    transition-property: margin-bottom;
+    transition-timing-function: ease;
+}
+.content3 section .popup > .about > .the_btn:hover::after {
+    margin-bottom: -250px;
+    animation: rotate 2000ms infinite linear;
+}
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    from { transform: rotate(360deg); }
+}
+
+/* 목업이 있는 좌측 화면 */
+.content3 section .popup > .figure_box {
+    width: 100%; 
+    background-color: rgba(255, 153, 0, 0.596);
+    border-radius: 20px 0 0 20px;
+    flex: 1.5;
+}
+/* 목업 */
+.figure {width: 800px; position: relative; z-index: 1; top: 150px; left: 120px;}
+.figure2 {width: 700px; position: relative;  top: -365px;left: 420px;}
+.figure3 {width: 700px; position: relative;  top: -800px;left: -120px;}
+.figure4 {width: 300px; position: relative; z-index: 1; top: -185px; left: 100px;}
+.figure5 {width: 700px; position: relative;  top: 20%;left: 0;}
+.figure6 {width: 150px; position: relative;  top: -210px; right: -140px;z-index: 2;}
+
+.figure_box > img {width: 100%;display: block;}
+
+/* 삼성전기 */
+.figure_box > .figure > .figure_img ,
+.figure_box > .figure2 > .figure_img ,
+.figure_box > .figure3 > .figure_img {
+    position: absolute; 
+    top: 21%;left: 23.3%;
+    width: 46.5%;height: 42%;
+    background-color: #fff; 
+    border-radius: 3px;  
+    overflow: hidden;
+}
+.popup.start > .figure_box > .figure > .figure_img > img {width: 100%; display: block; animation: figure 15s linear 0s infinite;}
+.popup.start > .figure_box > .figure2 > .figure_img > img {width: 100%; display: block; animation: figure2 15s linear 0s infinite;}
+.popup.start > .figure_box > .figure3 > .figure_img > img {width: 100%; display: block; animation: figure3 15s linear 0s infinite;}
+
+/* CJone */
+.figure_box > .figure4 > .figure_box3 > img {width: 100%;display: block;}
+#popup2 > .figure_box > .figure { /* PC 목업  */
+    z-index: 1;
+    position: relative; 
+    width: 800px;
+    top: 150px; left: 250px;
+}
+.figure_box > .figure4 > .figure_img2 { /* pad Phone */
+    position: absolute; 
+    top: 6.5%; left: 6.7%;
+    width: 55%; height: 87%; 
+    background-color: #fff; 
+    border-radius: 6px;
+    overflow: hidden;
+}
+.popup.start > .figure_box > .figure4 > .figure_img2 > img {
+    display: block;
+    width: 100%;
+    animation: figure4 15s linear 0s infinite;
+}
+.figure_box > .figure4 > .figure_img3 { /* Phone */
+    position: absolute; 
+    left: 70.5%; top: 29.9%;
+    background-color: #fff; 
+    border-radius: 10px; 
+    width: 26.5%; height: 64%; 
+    overflow: hidden;
+}
+.popup.start > .figure_box > .figure4 > .figure_img3 > img { 
+    display: block; 
+    width: 100%;
+    animation: figure5 15s linear 0s infinite;
+}
+
+/* 락앤락 */
+#popup3 > .figure_box > .figure4 {
+    z-index: 1;
+    position: relative; 
+    width: 300px;
+    top: -185px; left: 110px;
+}
+.content3 section #popup3.start > .figure_box > .figure4 > .figure_img2 > img { /* pad */
+    width: 100%; 
+    display: block; 
+    animation: figure7 15s linear 0s infinite;
+}
+.content3 section #popup3 > .figure_box > .figure4 > .figure_img2 {
+    position: absolute; 
+    top: 7.5%;left: 6.5%;
+    width: 55.2%;height: 85.2%; 
+    background-color: #fff;
+    border-radius: 3px; 
+    overflow: hidden;
+}
+.content3 section #popup3 > .figure_box > .figure4 > .figure_box3 > img { /* Phone */
+    width: 100%;
+    display: block;
+}
+.content3 section #popup3.start > .figure_box > .figure4 > .figure_img3 > img {
+    width: 100%; 
+    display: block;
+    animation: figure8 15s linear 0s infinite;
+    }
+.content3 section #popup3 > .figure_box > .figure4 > .figure_img3 {
+    position: absolute; 
+    left: 70.5%; top: 29.5%;
+    width: 26.5%;height: 64%; 
+    background-color: #fff; 
+    border-radius: 8px; 
+    overflow: hidden;
+}
+
+/* 코몽 */
+#popup4.start > .figure_box > .figure > .figure_img > img { /* pc */
+    width: 100%; 
+    display: block; 
+    animation: figure6 30s linear 5s infinite;
+}
+#popup4.start > .figure_box > .figure > .figure_img {
+    position: absolute; 
+    top: 21%;left: 23.3%;
+    width: 46.5%;height: 42%; 
+    background-color: #fff;
+    border-radius: 3px; 
+    overflow: hidden;
+}
+.popup.start > .figure_box > .figure6 > .figure_img4 { /* Phone */
+    position: absolute; 
+    top: 6.5%;left: 10%;
+    width: 80.2%;height: 87%;
+    background-color: #fff;
+    border-radius: 10px; 
+    overflow: hidden;
+}
+
+/* 카톡 */
+.figure5 {
+    width: 700px; 
+    position: relative; 
+    top: 50%; left: 125px;
+}
+.figure5 > .figure_box > .kakao {
+    position: absolute;
+    width: 100%;height: 100%;
+    background-color: #fff;
+    text-align: center;
+}
+.figure5 > .figure_box > .kakao > img.iphone {
+    position: relative;
+    width: 60%;top: 50%; 
+    transform: translateY(-50%);
+}
+.figure5 > .figure_box > .kakao > img.kakao_content {
+    position: absolute;
+    left: 29.3%;
+    top: -250px;
+    width: 40.5%;
+}
+
+@keyframes figure {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-75%);
+    }
+    100% {
+        transform: translateY(-0%);
+    }
+}
+@keyframes figure2 {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-79%);
+    }
+    100% {
+        transform: translateY(-0%);
+    }
+}
+@keyframes figure3 {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-46%);
+    }
+    100% {
+        transform: translateY(-0%);
+    }
+}
+@keyframes figure4 {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-66%);
+    }
+    100% {
+        transform: translateY(-0%);
+    }
+}
+@keyframes figure5 {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-72.5%);
+    }
+    100% {
+        transform: translateY(-0%);
+    }
+}
+@keyframes figure6 {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-92%);
+    }
+    100% {
+        transform: translateY(-0%);
+    }
+}
+@keyframes figure7 {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-85%);
+    }
+    100% {
+        transform: translateY(-0%);
+    }
+}
+@keyframes figure8 {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-90%);
+    }
+    100% {
+        transform: translateY(-0%);
+    }
+}
+
+
+
+
+/* content4 */
+.content4 section {
+    width: 100%; height: 100%;
+    padding: 100px 150px; 
+    box-sizing: border-box;
+}
+.content4 section .purerzone {
+    width: 100%;height: 200px; 
+    position: relative;
+}
+.content4 section .purerzone .purer {  
+    position: relative; width: 50%; /*height:60px overflow:hidden*/
+    border: 1px solid #ccc;
+}
+.content4 section .purerzone .pure div {display: inline-block;}
+.content4 section .purerzone .txt {position: absolute; right: 10%;text-align: left;top: -50%;transform: translateY(50%);}
+.content4 section .purerzone .txt > h1{font-size: 60px; margin-bottom: 10px; color: #f90;text-shadow: 3px 3px 10px rgba(224, 214, 200, 0.589);}
+.content4 section .purerzone .txt > ul {display: flex;flex-direction: row;justify-content: space-between;align-items: stretch;}
+.content4 section .purerzone .txt > ul > li {text-align: left; font-size: 30px;letter-spacing: 2px; color: rgb(255, 255, 255);}
+.content4 section .purerzone .txt > ul > li > ul > li {font-size: 20px; color: #000;}
+.content4 section .purerzone .txt > p {padding-top: 50px;line-height: 1.5;display: inline-block;text-align: left;font-family: 'Noto';}
+
+.content4 > section > .purerzone > .txt > span {opacity: 0;transform: translateX(1000px);transition: all 0.5s ease-in-out 1s;} 
+.content4 > section.on > .purerzone > .txt > span {opacity: 1;transform: translateX(0);} 
+.content4 > section > .purerzone > .txt > h1 {opacity: 0;transform: translateX(1000px);transition: all 0.8s ease-in-out 1s;} 
+.content4 > section.on > .purerzone > .txt > h1 {opacity: 1;transform: translateX(0);} 
+.content4 > section > .purerzone > .txt > ul {opacity: 0;transform: translateX(1000px);transition: all 1s ease-in-out 1s;} 
+.content4 > section.on > .purerzone > .txt > ul {opacity: 1;transform: translateX(0);} 
+.content4 > section > .purerzone > .txt > p {opacity: 0;transform: translateX(1000px);transition: all 1.3s ease-in-out 1s;} 
+.content4 > section.on > .purerzone > .txt > p {opacity: 1;transform: translateX(0);} 
+
+/* 이모지들 */
+/* 움직이는 효과 */
+.content4 > section.on > .purerzone > .pure > .ryan {opacity: 1;transform: translateX(0);}
+
+.content4 > section > .purerzone > .pure > .emoji.emoji_like {opacity: 0;transition: all 0.8s ease-in-out 1s;}
+.content4 > section > .purerzone > .pure > .emoji.emoji_love {opacity: 0;transition: all 1s ease-in-out 1s;}
+.content4 > section > .purerzone > .pure > .emoji.emoji_haha {opacity: 0;transition: all 1.2s ease-in-out 1s;}
+.content4 > section > .purerzone > .pure > .emoji.emoji_angry {opacity: 0; transition: all 1.4s ease-in-out 1s;}
+.content4 > section > .purerzone > .pure > .emoji.emoji_wow {opacity: 0;transition: all 1.6s ease-in-out 1s;}
+.content4 > section > .purerzone > .pure > .emoji.emoji_sad {opacity: 0;transition: all 1.8s ease-in-out 1s;}
+.content4 > section > .purerzone > .pure > .emoji.emoji_yay {opacity: 0;transition: all 2s ease-in-out 1s;}
+.content4 > section.on > .purerzone > .pure > .emoji {opacity: 1;}
+
+/* 라이언 */
+.ryan {
+    position: relative;
+    z-index: 10; 
+    left: 70px; top: -20px;  
+    opacity: 0; 
+    transform: translateX(-1000px);
+    transition: transform 0.5s ease 0s; 
+}
+.ears {
+    position: absolute;
+    top:0; left:calc(50% + 60px);
+    box-sizing: border-box;
+    width: 60px;height: 60px;
+    border-radius: 50%;
+    background: orange;
+    box-shadow:-95px 0 0 0 orange,95px 0 0 0 orange,-95px 0 0 6px #000,95px 0 0 6px #000;
+}
+.face {
+    position: absolute;
+    top:0;left:calc(50% - 60px);
+    box-sizing: border-box;
+    width: 315px;height: 315px;
+    border-radius: 50%; 
+    border: 6px solid #000;
+    background: orange;
+}
+
+.eyebrows:before, .eyebrows:after {
+    content: '';
+    position: absolute;
+    top:90px;left: calc(50% - 37.5px);
+    width: 75px;height: 15px;
+    border-radius: 2px;
+    background: #000;
+}
+.eyebrows:before {
+    margin-left: -75px;
+}
+.eyebrows:after {
+    margin-left: 75px;
+    animation: eyebrows-action 1s linear 2s infinite;
+}
+@keyframes eyebrows-action {
+    0%, 100% {transform: rotate(0deg);}
+    45%,55% {transform: rotate(-20deg);}
+}
+.eyes:before, .eyes:after {
+    content: '';
+    position: absolute;
+    top:120px;left: calc(50% - 10.5px);
+    width: 21px;height: 21px;
+    border-radius: 50%;
+    background: #000;
+}
+.eyes:before {
+    margin-left: -60px;
+    top:120px;
+}
+.eyes:after {
+    margin-left: 75px;
+    animation: eyes-action 1s linear 2s infinite;
+}
+@keyframes eyes-action {
+    0%, 100% {height: 21px;top:120px;}
+    45%,55% {height: 3px;top:120px;}
+}
+.nose {
+    position: absolute;
+    z-index: 5;
+    top:180px;left: calc(50% - 12px);
+    width: 24px;height: 24px;
+    border-radius: 50%;
+    background: #000;
+}
+.mouth:before, .mouth:after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top:186px;left: calc(50% - 30px);
+    width:60px;height:54px;
+    background:#fff;
+    border: 6px solid #000;
+    border-radius: 50%;
+}
+.mouth:before {
+    margin-left:-21px;
+    transform: rotate(-10deg);
+}
+.mouth:after {
+    margin-left:21px;
+    border-left-color:transparent;
+    transform: rotate(10deg);
+}
+
+/* 페이스북 이모지 */
+.emoji {
+    position: relative;
+    display: inline-block; 
+    width: 120px;height: 120px;
+    border-radius: 50%;
+    margin: 15px 15px 40px;
+    background: #ffda6a;
+}
+/* emoji emoji_like*/
+.emoji_like {
+    background: #548dff;
+    top: -50px;
+}
+.emoji_like .emoji_hand {
+    position: absolute;
+    left: 25px;bottom: 30px;
+    width: 20px;height: 40px;
+    background: #fff;
+    border-radius: 5px;
+    animation: hands-up 2s linear 0s infinite;
+}
+@keyframes hands-up {
+    25% {transform: rotate(15deg);}
+    50% {transform: rotate(-15deg) translateY(-10px);}
+    75%,100% {transform: rotate(0deg);}
+}
+
+.emoji_like .emoji_hand::before {
+    content: "";
+    position: absolute;
+    left: 25px;bottom: 5px; 
+    width: 40px;height: 10px;
+    background: #fff;
+    border-radius: 2px 10px 10px 2px;
+    box-shadow: 1px -9px 0 1px #fff,2px -19px 0 2px #fff,3px -29px 0 3px #fff;
+}
+.emoji_like .emoji_thumb {
+    position: absolute; 
+    right: -25px;top: -25px;
+    border-bottom: 20px solid #fff;
+    border-left: 20px solid transparent; 
+    transform: rotate(5deg);
+    transform-origin: 0 100%;
+    animation: thumb-up 2s linear 0s infinite;
+}
+@keyframes thumb-up {
+    25% {transform: rotate(20deg);}
+    50%, 100% {transform: rotate(5deg);}
+}
+.emoji_like .emoji_thumb::before {
+    content: '';
+    position: absolute;
+    left: -9.7px;top: -9px;
+    width: 10px;height: 12px;
+    background: #fff;
+    border-radius: 50% 50% 0 0;
+    box-decoration-break: -1px 4px 0 0 #fff;
+    transform: rotate(-14deg);
+    transform-origin: 100% 100% 
+}
+/* emoji_love */
+.emoji_love {
+    background: #f00; 
+    top: -20px;
+}
+.emoji_love .emoji_heart {
+    position: absolute; 
+    left: 50%;top: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    width: 80px;height: 80px;
+    /* border: 1px solid #000; */
+    animation: heart-beat 1s linear infinite alternate;
+}
+@keyframes heart-beat {
+    25% {transform: scale(1.1);}
+    75% {transform: 0.6;}
+}     
+.emoji_heart::before, .emoji_heart::after {
+    content: '';
+    position: absolute;
+    left: 50%;top: 50%;
+    width: 40px;height: 64px;
+    margin-left: -20px;
+    margin-top: -32px;
+    background: #fff;
+    border-radius: 20px 20px 0 0;
+}
+.emoji_heart::before {
+    transform-origin: 0 100%;
+    transform:translateX(20px) rotate(-45deg);
+}
+.emoji_heart::after {
+    transform-origin: 100% 100%;
+    transform: translateX(-20px) rotate(45deg);
+}
+/* emoji emoji_haha */
+.emoji.emoji_haha {top: 50px;}
+.emoji_haha .emoji_face {
+    position: absolute;
+    width: 100%; height: inherit; /* border: 1px solid #f00; */
+    animation:haha-face 2s linear infinite normal ;
+}
+@keyframes haha-face{
+    10% {transform: translateY(25px);}
+    20% {transform: translateY(15px);}
+
+    30% {transform: translateY(25px);}
+    20% {transform: translateY(15px);}
+
+    50% {transform: translateY(25px);}
+
+    60% {transform: translateY(0px);}
+    70% {transform: translateY(-10px);}
+
+    80% {transform: translateY(0px);}
+    90% {transform: translateY(-10px);}
+
+}
+.emoji_haha .emoji_eyes {
+    position: absolute; 
+    left: 50%;top: 35px;
+    margin-left: -13px;
+    width: 26px;height: 6px;
+    border-radius: 2px;
+    /* background: #fff; */
+    box-shadow: -25px 5px 0 0 #000,25px -5px 0 0 #000;
+    transform: rotate(20deg);
+}
+.emoji_haha .emoji_eyes::after {
+    content: "";
+    position: absolute;
+    left: 0;top: 0;
+    width: 26px;height: 6px;
+    border-radius: 2px;
+    box-shadow: -25px -5px 0 0 #000,25px 5px 0 0 #000;
+    transform: rotate(-40deg);
+}    
+.emoji_haha .emoji_mouth {
+    overflow: hidden;
+    position: absolute;
+    left: 50%;top: 50%;
+    width: 80px; height: 40px;
+    margin-left: -40px;
+    background: #000;
+    border-radius: 0 0 40px 40px;
+    animation: haha-mouth 2s linear infinite normal;
+}
+            
+@keyframes haha-mouth{
+    10% {transform:scale(0.6);top:45px;}
+    20% {transform:scale(0.8);top:45px;}
+
+    30% {transform:scale(0.6);top:45px;}
+    40% {transform:scale(0.8);top:45px;}
+
+    50% {transform:scale(0.6);top:45px;}
+
+    60% {transform:scale(1);top:50px;}
+    70% {transform:scale(1.2);top:50px;}
+
+    80% {transform:scale(1);top:50px;}
+    90% {transform:scale(1.1);top:50px;}
+}         
+.emoji_haha .emoji_tongue {
+    position: absolute;
+    left: 50%;bottom: -10px;
+    width: 70px;height: 30px;
+    margin-left: -35px;
+    background: #f55064;
+    border-radius: 50%;
+}      
+/* yay */
+.emoji.emoji_yay {
+    top: 230px; left: -100px;
+}
+.emoji_yay .emoji_face {
+    position: absolute;
+    width: 100%;height: inherit;
+    animation: yay 1s linear infinite alternate;
+}
+@keyframes yay{
+    25% {transform: rotate(-15deg);}
+    75% {transform: rotate(15deg);}
+}    
+.emoji_yay .emoji_eyebrows {
+    position: absolute; 
+    left: calc(50% - 3px);
+    top: 30px;
+    width: 6px;height: 6px;
+    border-radius: 50%;
+    box-shadow: -6px 0 0 0 #000,-36px 0 0 0 #000000,6px 0 0 0 #000,36px 0 0 0px;
+}          
+.emoji_yay .emoji_eyebrows::before,.emoji_yay .emoji_eyebrows::after {
+    content: ""; 
+    position: absolute; 
+    left: calc(50% - 18px);
+    bottom: 3px;
+    width: 36px;height: 18px; 
+    border-radius: 60px 60px 0 0;
+    border:6px solid #000;
+    border-bottom: 0;
+    box-sizing: border-box;
+}
+.emoji_yay .emoji_eyebrows::before {
+    margin-left: -21px;
+} 
+.emoji_yay .emoji_eyebrows::after {
+    margin-left: 21px;
+}
+.emoji_yay .emoji_mouth {
+    position: absolute;
+    left: calc(50% - 3px);
+    top:60px;
+    width: 6px;height: 6px;
+    border-radius: 50%;
+    /* background: #f00; */
+    box-shadow: -25px 0 0 0 #000,25px 0 0 0 #000
+    ,-35px 2px 30px 10px #D5234C,
+    35px -2px 30px 10px #D5234C;
+}
+.emoji_yay .emoji_mouth::after {
+    content: ''; 
+    position: absolute;
+    left: calc(50% - 40px); 
+    top: -64px;
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    border: 6px solid #000;
+    box-sizing: border-box;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+}    
+/* wow */
+.emoji.emoji_wow {
+    top: 400px; left: -300px;
+}
+.emoji_wow .emoji_face {
+    position: absolute; 
+    width: 100%;height: inherit;
+    animation: wow-face 3s linear 0s infinite;
+}
+@keyframes wow-face {
+    15%,25% {transform: rotate(20deg) translateX(-25px);}
+    45%,65% {transform: rotate(-20deg) translateX(25px);}
+    75%,100% {transform: rotate(0deg) translateX(0px);}
+}
+.emoji_wow .emoji_eyebrows {
+    position: absolute;
+    left: calc(50% - 3px);
+    width: 6px;height: 6px;
+    border-radius: 50%;
+    /* background: #fff; */
+    box-shadow: -18px 0 0 0 #000, -33px 0 0 0 #000, 18px 0 0 0 #000, 33px 0 0 0 #000;
+    animation:wow-brow 3s linear 0s infinite;
+}
+@keyframes wow-brow {
+    15%,65% {top: 25px;}
+    75%,100%,0% {top:15px}
+}
+.emoji_wow .emoji_eyebrows::before, .emoji_wow .emoji_eyebrows::after {
+    content: '';
+    position: absolute;
+    left: calc(50% - 12px);
+    top: -3px;
+    width: 24px;height: 20px;
+    border-radius: 50%;
+    border: 6px solid #000;
+    box-sizing: border-box;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+.emoji_wow .emoji_eyebrows::before {
+    margin-left: -25px;
+} 
+.emoji_wow .emoji_eyebrows::after {
+    margin-left: 25px;
+}    
+.emoji_wow .emoji_eyes {
+    position: absolute;
+    left: calc(50% - 8px);
+    top: 35px;
+    width: 16px;height: 24px;
+    border-radius: 50%; 
+    /* background: #f00; */
+    box-shadow: 25px 0 0 0 #000,-25px 0 0 0 #000;
+}
+.emoji_wow .emoji_tongue {
+    position: absolute;
+    left: calc(50% - 15px);
+    top: 50%;
+    width: 30px;height: 45px;
+    border-radius: 50%;
+    background: #000;
+    animation:wow-mouth 3s linear 0s infinite;
+}
+@keyframes wow-mouth {
+    10%,30% {width: 20px;height: 20px;left: calc(50% - 10px);}
+    50%,70% {width: 30px;height: 40px;left: calc(50% - 15px);}
+    75%,100% {height: 50px;}
+}
+/* emoji emoji_sad */
+.emoji.emoji_sad {
+    top: 480px; left: -610px;
+}
+.emoji_sad .emoji_face {
+    position: absolute;
+    width: 100%;height: inherit;
+    animation: sad-face 2s ease-in 0s infinite;
+}
+@keyframes sad-face {
+    25%, 35% {top: -15px;}
+    55%, 95% {top: 10px;}
+    100%, 0% {top: 0px;}
+}
+.emoji_sad .emoji_eyebrows {
+    position: absolute;
+    left: calc(50% - 3px);
+    top: 35px;
+    width: 6px;height: 6px;
+    border-radius: 50%;
+    box-shadow: -40px 9px 0 0 #000,-25px 0 0 0 #000, 25px 0 0 0 #000,40px 9px 0 0 #000;
+}
+.emoji_sad .emoji_eyebrows::before , .emoji_sad .emoji_eyebrows::after {
+    content: ''; 
+    position: absolute;
+    left: calc(50% - 15px);
+    top: 2px;
+    width: 30px;height: 20px;
+    border: 6px solid #000;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border-left-color: transparent; 
+    border-right-color: transparent; 
+    border-bottom-color: transparent;
+}
+.emoji_sad .emoji_eyebrows::before {
+    margin-left: -30px;
+    transform: rotate(-30deg);
+}
+.emoji_sad .emoji_eyebrows::after {
+    margin-left: 30px;
+    transform: rotate(30deg);
+}
+.emoji_sad .emoji_eyes { 
+    position: absolute;
+    left: calc(50% - 7px);
+    top: 50px;
+    width: 14px;height: 16px;
+    border-radius: 50%; 
+    /* background: #f00; */
+    box-shadow: 25px 0 0 0 #000,-25px 0 0 0 #000;
+}
+.emoji_sad .emoji_eyes::after {
+    content: '';
+    position: absolute;
+    width: 12px;height: 12px;
+    margin-left: 6px;
+    background: #548dff;
+    border-radius: 0 100% 40% 50% / 0 50% 40% 100%;
+    transform-origin: 0% 0%;
+    animation:tear-drop 2s ease-in infinite ;
+}
+@keyframes tear-drop{
+    0%,100% {
+        display: block;left: 35px;top: 15px;
+        transform: rotate(45deg) scale(0);
+    }
+    25% {
+        display: block;left: 35px;
+        transform: rotate(45deg) scale(2);
+    }
+    49.9% {
+        display: block;left: 35px;top: 65px;
+        transform: rotate(45deg) scale(0);
+    }
+    50% {
+        display: block;left: -35px;top: 15px;
+        transform: rotate(45deg) scale(0);
+    }
+    75% {
+        display: block;left: -35px;top: 15px;
+        transform: rotate(45deg) scale(2);
+    }
+    99.9% {
+        display: block;left: -35px;top: 65px;
+        transform: rotate(45deg) scale(0);
+    }
+}
+
+.emoji_sad .emoji_mouth {
+    position: absolute;
+    left: calc(50% - 3px);
+    top: 90px;
+    width: 6px;height: 6px;
+    border-radius: 50%;
+    box-shadow: -18px 0 0 0 #000,18px 0 0 0 #000;
+}
+.emoji_sad .emoji_mouth::after {
+    content: '';
+    position: absolute;
+    left: calc(50% - 30px);
+    top: -10px;
+    width: 60px;height: 80px;
+    box-sizing: border-box;
+    border: 6px solid #000;
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+/* angry */
+.emoji.emoji_angry {
+    top: 510px; left: -920px;
+}
+.emoji_angry {
+    background: linear-gradient(to bottom, #D5234C -10%,#FFDA6A 100%);
+    background-size: 100%;
+}
+.emoji_angry .emoji_face {
+    position: absolute;
+    width: 100%;height: inherit;
+    animation: angry-face 2s ease-in 0s infinite;
+}
+@keyframes angry-face {
+    35%,60% {transform: translateX(0) translateY(10px) scale(0.9);}
+    40% {transform: translateX(-5px) translateY(10px) scale(0.9);}
+    45% {transform: translateX(5px) translateY(10px) scale(0.9);}
+    50% {transform: translateX(-5) translateY(10px) scale(0.9);}
+    55% {transform: translateX(5) translateY(10px) scale(0.9);}
+}
+.emoji_angry .emoji_eyebrows {
+    position: absolute;
+    left: calc(50% - 3px);
+    top: 55px;
+    width: 6px;height: 6px;
+    border-radius: 50%;
+    box-shadow: -44px 5px 0 0 #000000,-7px 16px 0 0 #000000, 7px 16px 0 0 #000000,44px 5px 0 0 #000000;
+}
+.emoji_angry .emoji_eyebrows::before, .emoji_angry .emoji_eyebrows::after {
+    content: ''; 
+    position: absolute; 
+    left: calc(50% - 25px);
+    top: 0;
+    width: 50px;height: 20px;
+    border: 6px solid #000000;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+}
+.emoji_angry .emoji_eyebrows::before {
+    margin-left: -25px;
+    transform: rotate(15deg);
+} 
+.emoji_angry .emoji_eyebrows::after {
+    margin-left: 25px;
+    transform: rotate(-15deg);
+}                            
+.emoji_angry .emoji_eyes {
+    position: absolute;
+    left: calc(50% - 6px);
+    top: 70px;
+    width: 12px;height: 12px;
+    border-radius: 50%;
+    box-shadow: 25px 0 0 0 #000000,-25px 0 0 0 #000000;
+}
+.emoji_angry .emoji_mouth {
+    position: absolute;
+    left: calc(50% - 18px); 
+    bottom: 15px;
+    width: 36px;height: 18px;
+    background: #000;
+    border-radius: 50%;
+    animation: angry-mouth 2s ease-in 0s infinite;
+}
+@keyframes angry-mouth {
+    25%, 50% {height: 6px;bottom: 25px;}
+}
+
+
+
+
+/* content6 */
+/* 제목 */
+.content5 section {
+    position: relative;
+    height: 100%;width: 100%; 
+}
+.content5 section .title {
+    position: absolute; 
+    top: 50%;left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+.content5 > section > .title > h1 {
+    width: 900px;
+    font-size: 55px;
+    letter-spacing: 5px;
+    margin-bottom: 50px;
+    opacity: 0; 
+    transform: scale(5);
+    transition: transform 0.5s ease-in-out 0s;
+}
+.content5 > section.on > .title > h1 {
+    opacity: 1; 
+    transform: scale(1);
+}
+.content5 section .title b {
+    margin-right: 20px;
+    opacity: 0;
+}
+.content5 > section.on > .title > b {
+    opacity: 1;
+    transition: opacity 0.8s linear 0s;
+}
+
+/* 배경 */
+.content5 section .bubble {
+    position: absolute;
+    width: 100%;height: 100%;
+}
+/* 버블 */
+.content5 section .bubble div[class^="bubble_"] {
+    position: absolute;
+    width: 1px;height: 1px;
+    background: rgba(146, 192, 215, 0.3);
+    border-radius: 50%;
+}
+@keyframes bubble_movement {
+    0% {
+        transform: translate3d(0,0,0);
+        width: 1px;height: 1px;
+    }
+    100% {
+        transform: translate3d(0,-500px,0);
+        width: 75px;height: 75px;
+    }
+}
+
+.bubble_1   {bottom: 6px;left: 48%;animation: bubble_movement 4s infinite ease-in -0.66s;}
+.bubble_2   {bottom: 1px;left: 40%;animation: bubble_movement 4s infinite ease-in -0.26s;}
+.bubble_3   {bottom: 3px;left: 32%;animation: bubble_movement 4s infinite ease-in -1.23s;}
+.bubble_4   {bottom: 6px;left: 24%;animation: bubble_movement 4s infinite ease-in -0.53s;}
+.bubble_5   {bottom: 4px;left: 16%;animation: bubble_movement 4s infinite ease-in -0.32s;}
+.bubble_6   {bottom: 6px;left: 12%;animation: bubble_movement 4s infinite ease-in -2.23s;}
+.bubble_7   {bottom: 1px;left: 56%;animation: bubble_movement 4s infinite ease-in -1.67s;}
+.bubble_8   {bottom: 3px;left: 86%;animation: bubble_movement 4s infinite ease-in -0.66s;}
+.bubble_9   {bottom: 6px;left: 34%;animation: bubble_movement 4s infinite ease-in -1.23s;}
+.bubble_10  {bottom: 4px;left: 37%;animation: bubble_movement 4s infinite ease-in -0.32s;}
+.bubble_11  {bottom: 6px;left: 85%;animation: bubble_movement 4s infinite ease-in -2.23s;}
+.bubble_12  {bottom: 1px;left: 53%;animation: bubble_movement 4s infinite ease-in -0.66s;}
+.bubble_13  {bottom: 3px;left: 49%;animation: bubble_movement 4s infinite ease-in -0.32s;}
+.bubble_14  {bottom: 6px;left: 77%;animation: bubble_movement 4s infinite ease-in -2.23s;}
+.bubble_15  {bottom: 4px;left: 16%;animation: bubble_movement 4s infinite ease-in -3s;}
+.bubble_16  {bottom: 6px;left: 66%;animation: bubble_movement 4s infinite ease-in -0.66s;}
+.bubble_17  {bottom: 1px;left: 32%;animation: bubble_movement 4s infinite ease-in -1.78s;}
+.bubble_18  {bottom: 3px;left: 73%;animation: bubble_movement 4s infinite ease-in -1.18s;}
+.bubble_19  {bottom: 6px;left: 62%;animation: bubble_movement 4s infinite ease-in -0.52s;}
+.bubble_20  {bottom: 4px;left: 23%;animation: bubble_movement 4s infinite ease-in -2.78s;}
+.content5 section .bubble div[class^="bubble_"]::after {
+    content: ''; 
+    position: absolute; 
+    left: 50%;top: 50%;
+    width: 85%;height: 85%; 
+    border-radius: 50%;
+    border-top: 1px solid rgba(255, 255, 255, 0.861);
+    transform: translate3d(-50%,-50%,0) rotateZ(-45deg);
+}
+
+
+
+
+
+/* 햄버거 버튼 */
+/* menu.html */
+.menu_list {
+    background:#fff; 
+    position: flex; 
+    width: 100%;
+    height: 100vh;
+}
+.menu_list ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menu_list ul li {
+    line-height: 3;
+}
+.menu_list ul li a {
+    transition: color 300ms linear 0s;
+}
+.menu_list ul li a:hover {
+    color: #f90; 
+    text-shadow: 1px 1px 20px #a1c4fd;
+}
+
+
+/* 처음에 들어가는 효과 */
+.menu_list ul.text li {position: relative;}
+/* 띠 */
+.menu_list ul.text li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: #98d4f3;
+    border-radius: 50%;
+    transform: scaleX(0);
+    opacity: 0.5;
+}
+.menu_list.on ul.text > li:nth-child(1) {animation: menu0 0.6s cubic-bezier(0.87, 0.02, 0, 0.97) 0.2s forwards;}
+.menu_list ul.text li:nth-child(1)::before  {animation: menu1 0.6s cubic-bezier(0.87, 0.02, 0, 0.97) 0.2s forwards;}
+.menu_list.on ul.text > li:nth-child(2) {animation: menu0 0.6s cubic-bezier(0.87, 0.02, 0, 0.97) 0.2s forwards;}
+.menu_list ul.text li:nth-child(2)::before  {animation: menu1 0.6s cubic-bezier(0.87, 0.02, 0, 0.97) 0.5s forwards;}
+.menu_list.on ul.text > li:nth-child(3) {animation: menu0 0.6s cubic-bezier(0.87, 0.02, 0, 0.97) 0.2s forwards;}
+.menu_list ul.text li:nth-child(3)::before  {animation: menu1 0.6s cubic-bezier(0.87, 0.02, 0, 0.97) 0.8s forwards;}
+.menu_list.on ul.text > li:nth-child(4) {animation: menu0 0.6s cubic-bezier(0.87, 0.02, 0, 0.97) 0.2s forwards;}
+.menu_list ul.text li:nth-child(4)::before  {animation: menu1 0.6s cubic-bezier(0.87, 0.02, 0, 0.97) 1.1s forwards;}
+.menu_list.on ul.text > li:nth-child(5) {animation: menu0 0.6s cubic-bezier(0.87, 0.02, 0, 0.97) 0.2s forwards;}
+.menu_list ul.text li:nth-child(5)::before  {animation: menu1 0.6s cubic-bezier(0.87, 0.02, 0, 0.97) 1.5s forwards;}
+@keyframes menu0 {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    51% {opacity: 1;}
+    100% {opacity: 1;}
+}
+@keyframes menu1 {
+    0% {transform-origin: right;transform: scaleX(0);}
+    50% {transform-origin: right;transform: scaleX(1);}
+    51% {transform-origin: left;}
+    100% {transform-origin: left;transform: scaleX(0);}
+}
+
+
+/* 햄버거 버튼 열리는 효과 */
+.slide-in {
+    animation: change 0.5s ease forwards;
+}
+
+@keyframes change {
+    from {
+        transform: translateX(-100%);
+        visibility: visible;
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+

@@ -1,0 +1,81 @@
+    /* footer */
+    .address p {display: none;}
+    /* address */
+    div.address {float: left;;width: 450px;}
+    .LocknLock {background: url(../images/logo_b.png) no-repeat 0 50%; width: 160px; height: 25px;text-indent: -9999px; overflow: hidden; cursor: pointer;}
+    /* 락앤락 로고 아래 text */
+    div.address_txt { margin: 20px 0 30px 0; color: #54565b;}
+    div.address_txt > address {margin-bottom: 10px; }
+    /* 락앤락몰 스마트스토어 */
+    ul.moll > li {display: inline-block;}
+    ul.moll > li:last-child {margin-left: 5px;}
+    ul.moll > li > a {font-size: 15px; font-weight: 700;}
+    ul.moll > li > a::after {
+        content: ""; display: block; background-color: rgb(0, 0, 0); height: 0.5px; width: 0%; left:0%;
+        transition: all 0.3s ease 0s;
+    }
+    ul.moll > li > a:hover::after {width: 70%; left:100%;}
+
+    ul.moll > li > a > span {margin-left: 5px; padding-right: 15px; border-right: 1px solid #ccc;}
+    ul.moll > li:nth-of-type(2) > a > span {border-right: none ;}
+    /* 아이콘 */
+    ul.icon > li {display: inline-block; margin-top: 20px;}
+    ul.icon > li > a {font-size: 25px; margin-right: 20px; transition: color 0.1s ease-in 0s;}
+    ul.icon > li > a:hover{color: #54565b;}
+    ul.icon > li:nth-of-type(3) > a,
+    ul.icon > li:nth-of-type(2) > a {font-size: 20px;}
+    ul.icon > li > a img {width: 15px;}
+
+    /* sitemap */
+    div.sitemap {float: left;right: 390px; width: 800px;}
+    div.sitemap > ul > li {display: inline-block; margin-right: 85px;}
+
+    div.sitemap > ul > li > a {display: block; font-size: 15px; font-weight: 600; }
+
+    div.sitemap > ul > li > a::after {
+        content: ""; display: block; background-color: rgb(0, 0, 0); height: 0.5px; width: 0%; left:0%;
+        transition: all 0.3s ease 0s;
+    }
+    div.sitemap > ul > li > a:hover::after{width: 100%; left:100%;}
+    div.sitemap > ul > li > ul > li > a::before{
+        content: ""; display: block; background-color: rgb(0, 0, 0); height: 0.5px; width: 0%; left:0%;
+        transition: all 0.3s ease 0s; transform: translateY(25px);
+    }
+    div.sitemap > ul > li > ul > li:hover > a::before {width: 100%; left:100%;}
+
+    div.sitemap > ul > li > ul {position: absolute; margin-top: 25px;}
+    div.sitemap > ul > li > ul li {line-height: 30px;}
+    div.sitemap > ul > li > ul li a {font-size: 15px; display: inline-block;}
+
+    .fooot_links{clear: both;}
+    .fooot_links > ul > li {display: inline-block; margin-top: 50px; margin-right: 10px;font-weight: 500; color: #54565b ; border-right: 1px solid #ccc; padding-right: 10px;}
+    .fooot_links > ul > li a.bold{font-weight: 700; color: #101820;}
+    .fooot_links > ul > li > a:after{
+        content: ""; display: block; background-color: rgb(0, 0, 0); height: 0.5px; width: 0%; left:0%;
+        transition: all 0.3s ease 0s;
+    }
+    .fooot_links > ul > li:hover > a:after{width: 100%; left:100%;}
+    
+    /* 패밀리사이트 */
+    div.family {float: right;}
+    div.family > dl.family_button > dd {position: relative;right: 100px; padding: 20px 0 10px 0; bottom: 45px; border-bottom: 1px solid #000;}
+    div.family > dl.family_button > dd > a {display: block; width: 212px;height: 15px;}
+    div.family > dl.family_button > dd > ul {position: absolute;bottom: 40px;width: 212px;height: 185px; border: 1px solid rgb(218, 214, 214); background: #f7f7f7; display: none;}
+    div.family > dl.family_button > dd.on > ul {display: block;}
+    div.family > dl.family_button > dd > ul >li {padding-left: 20px; line-height: 1.5;}
+    div.family > dl.family_button > dd > ul >li:first-child {padding-top: 20px;}
+    div.family > dl.family_button > dd > span {position: absolute; background: url(../images/foot_arr_up.png) no-repeat 0 0; width: 30px; background-size: 10px; right: -20px; bottom: 5px;}
+
+    /* top버튼 */
+    #footer > a.btn_top {position: absolute; background: black; right: 347px; bottom: 325px; padding: 12px 12px 12px 10px;transition: all .2s ease-in 0s;}
+    #footer > a.btn_top:hover {background-color: #0071e3; }
+    #footer > a.btn_top.on {display: block;}
+    /* 락앤락몰 고정 */
+    #wrap > a.btn_locknlock {
+        position: absolute; z-index: 1000; right: 0px;bottom: 0; 
+        background: url(../images/homepage_banner3.png) no-repeat 50% 50%;background-size: 110px; width: 169px;height: 170px;
+        text-indent: -9999px;overflow: hidden;
+        transition: all 0.5s ease 0s;
+    }
+    #wrap > a.btn_locknlock.on {display: block; position: fixed;}
+    #wrap > a.btn_locknlock.ab {display: block; position: absolute;right: 0px;bottom: auto; transition: all 0.5s ease 0s;}

@@ -1,0 +1,169 @@
+
+#container {width: 100%; padding-top: 210px;}
+.content1 {width: 669px; margin: 0 auto;}
+.content2 {position: relative; background: #f7f7f7; padding-bottom: 60px;}
+
+
+/* 로고 */
+.logo > a {background: url(../images/logo_b.png)}
+/* 주메뉴 */
+nav.gnb > ul >li >a {color: rgb(0, 0, 0) ;}     
+nav.gnb > ul >li >a::after {background: #000;}
+
+nav.gnb > ul >li > div {
+    display: none;
+    position: absolute;left: 0; width: 100%;
+    line-height: 30px; 
+    margin-top: 0px;
+}
+nav.gnb > ul > li:hover > div {display: block;background: rgb(255, 255, 255);}
+nav.gnb > ul > li:hover > div > ul > li > a {padding: 20px 0; width: 100%;}
+nav.gnb > ul > li:hover:nth-child(2) > div > ul > li {margin-bottom: 30px;}
+nav.gnb > ul > li:hover:nth-child(2) > div > ul > li > a {padding-bottom: 0;}
+nav.gnb > ul >li:nth-child(1) > div > ul {display: block;}
+nav.gnb > ul >li:first-child > div > ul {left: -100px; }
+
+
+/* 탑메뉴 */
+/* 락앤락몰 */
+/* kor */
+ul.topMenu > li:nth-child(2) > a {color: rgb(0, 0, 0); font-size: 15px;}
+ul.topMenu > li:nth-child(2) {background: url(../images/header_arr_down_b.png) no-repeat 90% 40%; background-size: 18px ; }
+ul.topMenu > li > ul {display: none; position: absolute;top: 64px; }                    
+ul.topMenu > li > ul a {
+    width: 110px;height: 65px; position: absolute;left: -10px; 
+    background: white; border: 1px solid rgb(206, 200, 200);
+    text-align: center;line-height: 65px; color: #b2b2b2; font-weight: bold;
+}
+/* 검색버튼 */
+.btn_srch > a {
+    display: block;
+    width: 23px;height: 23px; background: url(../images/btn_srch_ico_b.png) no-repeat 0 0;
+    text-indent: -9999px;overflow: hidden;
+}
+/* 검색박스 */
+/* 제목 */
+div.srch_inner > h1.logo > a {
+    display: block; width: 135px;height: 22px; background: url(../images/logo_b.png) no-repeat 0 0;
+    text-indent: -9999px;overflow: hidden; left: 272px;
+}      
+/* 추천키워드 */
+div.srch_inner > form >fieldset {width: 100%;height: 55px;background: #fff;margin-bottom: 20px; }
+div.srch_inner > form > div {width: 100%;padding-top: 60px;}
+div.srch_inner > form > div > b {position: absolute ;top: 100px; font-size: 15px;text-shadow:0 0 1px gray; color: gray;}
+div.srch_inner > form > div > a {
+    display: inline-block; font-weight: 500; font-size: 15px; color: #666;
+    padding: 7px 10px;  margin:10px 4px 0 0;
+    border: 1px solid rgb(212, 211, 211); border-radius: 5px; background: #f7f7f7;
+}
+div.srch_inner > form > div > a:hover {color: royalblue;border: royalblue 1px solid;background: #fff;}
+input::placeholder {font-size: 15px; font-weight: 500;}
+/* 검색창 */
+div.srch_inner input[type="search"] {width: 600px;height: 68px; border: none;text-shadow:0 0 1px gray; color: gray;}
+div.srch_inner button[type="button"] {
+    position: absolute; 
+    background: url(../images/btn_srch_ico_b.png) no-repeat 0 50%; width: 20px; background-size: 20px;
+    border: none; 
+    margin: 20px 50px;
+    text-indent: -9999px;overflow: hidden;
+}
+/* 닫기버튼 */
+.srch_wrap > a.btu_srch {
+    position:absolute;right: 60px;top: 0;
+    background: url(../images/btn_close_ico_b.png) no-repeat 0 50%;
+    width: 17px; margin: 20px 210px;
+    text-indent: -9999px;overflow: hidden;
+}    
+
+/* .content1 */
+.content1 {position: relative; margin-bottom: 70px;}
+.content1 > h2 {font-size: 63px;font-weight: 700; letter-spacing: -4px; padding-bottom: 65px; text-align: center; }
+.content1 > p {font-size: 18px; font-weight: 500; padding-bottom: 10px; letter-spacing: -1px; text-shadow: 0px 0px 0px  #333;}
+.content1 > div {border: 1px solid #d8d8d8; padding: 22px 30px;}
+.content1 > div > h3 {font-size: 20px; font-weight: 700; padding-bottom: 10px;}
+.content1 > div > p {font-size: 16px; line-height: 1.6;}
+.content1 > div > a.link {position: absolute; font-size: 16px; right: 30px; bottom: 50px; color: white ; background: #000; padding: 9px 20px; letter-spacing: -1px; transform: translate(0, 0); transition: all 0.3s ease 0s;border: #000000 1px solid;}
+.content1 > div > a.link:hover {color: #0071e3;border: #0071e3 1px solid; color: white;}
+.content1 > div > a.link:hover::before {left: 0;right: auto;width: 100%;}
+.content1 > div > a.link::before {
+    z-index: -1; position: absolute;
+    top: 0;right: 0;height: 100%;width: 0; 
+    background: #0071e3;
+    content: "";
+    transition: all 0.3s ease 0s;
+}
+/* .content2 */
+.content2 > div {width: 669px;margin: 0 auto;}
+.content2 > div > h3 {font-size: 20px;letter-spacing: -2px; font-weight: 600; padding-top: 72px; border-bottom: 2px solid #000; padding-bottom: 15px;}
+.content2 > div > form > fieldset > dl > dt {padding: 20px 0; font-size: 18px; letter-spacing: -1px;}
+.content2 > div > form > fieldset > dl > dt.cursor > label {cursor: pointer;}
+.content2 > div > form > fieldset > dl > dt > label > strong {padding-left: 5px;}
+/* input 크기 조정 */
+.content2 > div > form > fieldset > dl:nth-child(3) > dd > input {width: 100%; height: 48px; border: 1px solid #d8d8d8;}
+.content2 > div > form > fieldset > dl:nth-child(5) > dd > input {width: 100%; height: 48px; border: 1px solid #d8d8d8;}
+.content2 > div > form > fieldset > dl:nth-child(6) > dd > input {width: 659px; height: 48px; border: 1px solid #d8d8d8;}
+.content2 > div > form > fieldset > dl > dd.Phone_N > input {padding-left: 10px; }
+.content2 > div > form > fieldset > dl:nth-child(7) > dd > input {width: 100%; height: 48px; border: 1px solid #d8d8d8;}
+.content2 > div > form > fieldset > dl > dd > textarea {width: 100%; height: 164px; border: 1px solid #d8d8d8; box-sizing: border-box; padding-left: 20px;padding-top: 10px; font-size: 15px; letter-spacing: -2px;}
+.content2 > div > form > fieldset > dl > dd > select {width: 320px ;height: 48px; border: 1px solid #d8d8d8;padding-left: 10px; font-size: 15px;}
+/* 첨부파일 */
+.content2 > div > form > fieldset > dl > dd.custom_file > input[type="text"] {background: white;width: 535px;height: 50px; border:1px solid #0071e3; margin-right: 5px;}
+.content2 > div > form > fieldset > dl > dd.custom_file > input[type="file"] {display: none;}
+.content2 > div > form > fieldset > dl > dd.custom_file > label {
+    cursor: pointer; 
+    background-color: #101820;color: rgb(255, 255, 255); 
+    display: inline-block;width: 120px;height: 50px; 
+    text-align: center;line-height: 50px;font-size: 16px;
+    transform: translate(0, 0); 
+    transition: all 0.3s ease 0s;border: #000000 1px solid; 
+}
+.content2 > div > form > fieldset > dl > dd.custom_file > label:hover {border: #0071e3 1px solid; color: white;}
+.content2 > div > form > fieldset > dl > dd.custom_file > label:hover::before {left: 0;right: auto;width: 100%;}
+.content2 > div > form > fieldset > dl > dd.custom_file > label::before {
+    z-index: -1; position: absolute;top: 0px;right: 0px;height: 100%;width: 0; 
+    background: #0071e3;
+    content: ""; transition: all 0.3s ease 0s;
+}
+.content2 > div > form > fieldset > dl > dd.custom_file > p {padding: 15px 0; font-size: 15px; font-weight: 500;}
+/* 약관동의 */
+.content2 > div > form > fieldset > h3 {font-size: 20px;margin-top: 30px; font-weight: bold; border-bottom: 2px solid #000;padding-bottom: 10px;}
+.content2 > div > form > fieldset > .check {padding: 20px 0; font-size: 15px;}
+.content2 > div > form > fieldset > .formbtn {
+    position: absolute;right: 620px;bottom: 340px; width: 30px; 
+    background: url(../images/foot_arr_up.png) no-repeat 50% 50%; 
+    text-indent: -9999px;overflow: hidden; border-style: none;
+}
+.agree {
+    width: 654px;height: 142px; 
+    overflow: hidden auto; 
+    border: 1px solid rgb(211, 211, 211);
+    background: #fff; 
+    line-height: 3.5; padding-left: 15px;
+}
+div.check {position: relative;}
+div.top_button {
+    position: absolute;top:10px;right: 0;bottom: 0;
+    text-indent: -9999px;overflow: hidden ;
+    border: none;background: url(../images/foot_arr_up.png) no-repeat 50% 50%;
+    width: 18px; background-size: 15px;
+}
+button[type="submit"]:nth-of-type(1) {
+    cursor: pointer; font-size: 18px; 
+    background: #f7f7f7;  margin-left: 209px; width: 130px;height: 57px;  margin-top: 50px; 
+    border: 1px solid #000;
+    transform: translate(0, 0); transition: all 0.3s ease 0s;
+}
+button[type="submit"]:nth-of-type(2) {
+    cursor: pointer; font-size: 18px; 
+    background: #101820;color: white; margin-left: 8px; width: 113px;height: 57px;margin-top: 50px; 
+    border: 1px solid #000;
+    transform: translate(0, 0); transition: all 0.3s ease 0s;
+}
+.content2 > div > form > fieldset > button[type="submit"]:hover {border: #0071e3 1px solid; color: rgb(255, 255, 255);}
+.content2 > div > form > fieldset > button[type="submit"]:hover::before {left: 0;right: auto;width: 100%;}
+.content2 > div > form > fieldset > button[type="submit"]::before {
+    content: "";position: absolute;z-index: -1000; background: #0071e3; 
+    top: 0;right: 0;height: 100%;width: 0; 
+    transition: all 0.3s ease 0s;
+}
+
